@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>task0003 to-do</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <link href="css/task0003.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header">
+            <h1>GTD Tools by CiSplus</h1>
+        </div>
+        <div id="main-container" class="clearfix">
+            <div id="task-detail">
+                <div class="main-wrap">
+                    <div class="task-detail-headerarea clearfix">
+                        <label id="detail-title" class="task-detail-title">任务标题:</label>
+                        <input type="text" id="edit-title" class="input-header-date" placeholder="请输入标题,长度不要超过20个字符" maxlength="20">
+                        <input type="image" class="editbtn" id="edit-task" title="修改" src="img/edit.png">
+                        <input type="image" class="editbtn" id="complete-task" title="完成任务"src="img/complete.png">
+                        <input type="button" class="editbtn" id="preserve-change" value="保存修改">
+                        <input type="button" class="editbtn" id="cancel-change" value="取消">
+                        <input type="button" class="editbtn" id="submit-task" value="确定">
+                        <input type="button" class="editbtn" id="cancel-task" value="取消">
+                    </div>
+                    <div class="task-detail-datearea">
+                        <label id="task-detail-date">任务日期:</label>
+                        <input type="text" id="edit-date" class="input-header-date" placeholder="请输入日期，格式为2015-01-01">
+                    </div>
+                    <div class="task-detail-contentarea">
+                        <p id="task-detail-content">zhelishi neirong </p>
+                        <textarea id="edit-content" placeholder="请输入任务内容,长度不要超过200个字符。千万不要输入分号，否则你将看不到分号以后的内容。。。"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div id="all-tasks">
+                <p id="all-tasks-header">所有任务(<span class="task-num" id="all-tasks-num">0</span>)</p>
+                <p>分类列表</p>
+                <ul id="all-tasks-list">
+                </ul>
+                <div id="add-class" class="addarea">
+                    <p><img src="img/add.png">新增分类</p>
+                </div>
+            </div>
+            <div id="task-items">
+                <div class="task-items-header">
+                    <label id="select-all" class="active-label">所有</label>
+                    <label id="select-undo">未完成</label>
+                    <label id="select-done">已完成</label>
+                </div>
+                <div id="task-items-list">
+                    <ul id="task-items-list-desc">
+                    </ul>
+                </div>
+                <div id="add-task" class="addarea">
+                    <p><img src="img/add.png">新增任务</p>
+                </div>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="modal">
+            <h1>添加新分类</h1>
+            <div class="modal-new-class">
+                <label>请输入新的分类名称：</label>
+                <input type="text" id="new-classname" placeholder="请勿超过10个字符" maxlength="10">
+            </div>
+            <div class="modal-new-class">
+                <label>请选择所属父级分类：</label>
+                <select name="newClass" id="selected-parentID">
+                    <option value="-1">创建新的父级分类</option>
+                </select>
+            </div>
+            <input type="button" class="add-class-btn" id="add-new-class" value="确定">
+            <input type="button" class="add-class-btn" id="cancel-add-class" value="取消">
+        </div>
+        <script src="js/util.js"></script>
+        <script src="js/initAll.js"></script>
+        <script src="js/task0003.js"></script>
+    </body>
+</html>
